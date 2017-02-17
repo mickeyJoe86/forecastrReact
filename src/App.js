@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Navigation from './components/Navigation';
 import CurrentConditions from './components/CurrentConditions';
 import SevenDay from './components/SevenDay';
+import './App.css';
 
 class App extends Component {
   render() {

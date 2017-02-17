@@ -7,7 +7,7 @@ class Navigation extends Component {
             <Navbar>
                 <Navbar.Header>
                     <Navbar.Brand>
-                        <a href="#">React-Bootstrap</a>
+                        <a href="#">Forecastr </a>
                     </Navbar.Brand>
                 </Navbar.Header>               
             </Navbar>
