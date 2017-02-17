@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
 import Navigation from './components/Navigation';
-import Body from './components/Body';
+import CurrentConditions from './components/CurrentConditions';
+import SevenDay from './components/SevenDay';
 
 class App extends Component {
   render() {
     return (
       <div>
         <Navigation />
-        <Body />
+        <div className="container">
+          <CurrentConditions />
+          <SevenDay />
+        </div>
       </div>
     );
   }
 }
-
 export default App;
