@@ -7,8 +7,9 @@ var SevenDay = React.createClass({
         return { panels: [] }
     },
     componentDidMount: function () {
+        var response = MockData();
         this.setState({            
-            panels: MockData()
+            panels: response.panels
         });
     },
     render: function () {
@@ -36,5 +37,4 @@ var SevenDay = React.createClass({
         );
     }
 });
-
 export default SevenDay;
