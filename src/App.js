@@ -3,24 +3,23 @@ import Navigation from './components/Navigation';
 import CurrentConditions from './components/CurrentConditions';
 import SevenDay from './components/SevenDay';
 
-
 import './App.css';
 import MockData from './MockData';
 
 var App = React.createClass({
 	getInitialState: function () {
-		var response = MockData();
 		return {
-			currently: response.currentConditions,
-			panels: response.panels
+			currently: {},
+			panels: []
 		};
 	},
-	// componentDidMount: function () {
-	// 	var response = MockData();
-	// 	this.setState({
-	// 		currently: response.currentConditions
-	// 	});
-	// },
+	componentWillMount: function () {
+		var response = MockData();
+		this.setState({
+			currently: response.currentConditions,
+			panels: response.panels
+		});
+	},
 	render: function () {
 		return (
 			<div>
