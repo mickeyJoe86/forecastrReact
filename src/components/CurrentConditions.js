@@ -9,6 +9,7 @@ var CurrentConditions = React.createClass({
 				<h2>Current Conditions</h2>
 				<hr />
 				<div>
+                    <i className="wi wi-night-sleet"></i>
 					<p>{ this.props.currently.temp }&deg;</p>
 					<p>{ this.props.currently.description }</p>
 					<p>precip: {this.props.currently.precip } &#37;</p>
