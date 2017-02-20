@@ -1,7 +1,20 @@
 import React, { Component } from 'react';
-import { Navbar } from 'react-bootstrap';
+import { Navbar, Button, FormGroup, FormControl } from 'react-bootstrap';
 
 class Navigation extends Component {
+	constructor() {
+		super();
+		this.state = { value: 'fet' };
+		this.handleChange = this.handleChange.bind(this);
+		this.handleSubmit = this.handleSubmit.bind(this);
+	}
+	handleSubmit(event) {
+		event.preventDefault();
+		alert("test: " +  this.state.value);
+	}
+	handleChange(event){
+		this.setState({ value: event.target.value })
+	}
 	render() {
 		return (
 			<Navbar>
@@ -10,6 +23,14 @@ class Navigation extends Component {
 						<a href="#">Forecastr </a>
 					</Navbar.Brand>
 				</Navbar.Header>
+				<Navbar.Form pullRight>
+					<form onSubmit={this.handleSubmit}>
+						<FormGroup>
+							<FormControl type="text" placeholder="Search" onChange={this.handleChange} value={ this.state.value }/>
+						</FormGroup>					
+						<Button type="submit">Submit</Button>
+					</form>
+				</Navbar.Form>
 			</Navbar>
 		);
 	}
