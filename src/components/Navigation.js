@@ -10,6 +10,7 @@ class Navigation extends Component {
 	}
 	handleSubmit(event) {
 		event.preventDefault();
+		//Handle Post below
 		alert("test: " +  this.state.value);
 	}
 	handleChange(event){
